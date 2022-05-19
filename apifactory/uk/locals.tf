@@ -1,7 +1,7 @@
 locals {
   # TFC inputs
   terraform_organization = "kidsloop-infrastructure"
-  working_directory      = basename(abspath("."))
+  # working_directory      = basename(abspath("."))
 
   # Imported dependencies (mark as non-sensitive)
   dep_meta    = nonsensitive(data.tfe_outputs.meta.values)

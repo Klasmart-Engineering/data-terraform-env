@@ -17,3 +17,8 @@ data "tfe_outputs" "cluster" {
   organization = local.terraform_organization
   workspace    = "cluster-${local.working_directory}"
 }
+
+data "tfe_outputs" "service-meta-data" {
+  organization = local.terraform_organization
+  workspace    = "service-meta-data"
+}

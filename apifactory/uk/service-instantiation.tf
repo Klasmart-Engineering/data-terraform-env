@@ -1,7 +1,6 @@
 module "service_instance" {
   # Module import info here
-  source  = "app.terraform.io/kidsloop-infrastructure/svc-data/aws"
-  version = "0.1.0"
+  source  = "git@github.com:KL-Engineering/data-terraform-svc.git"
 
   # Passthrough inputs
   region              = local.dep_meta.region
@@ -17,10 +16,11 @@ module "service_instance" {
 
   # Kubernetes
   kubernetes_server_url = local.cluster_endpoint
-  argocd_namespace =
-  argocd_project =
+  argocd_namespace = "argocd"
+  argocd_project = local.argocd_project_name
   helm_chart_url = "git@github.com:KL-Engineering/data-manifests.git"
   helm_chart_revision = "HEAD"
+  service_namespace = "data-offering-apifactory-uk"
 
   providers = {
     aws            = aws

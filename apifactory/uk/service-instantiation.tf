@@ -16,12 +16,19 @@ module "service_instance" {
 
   # Kubernetes
   kubernetes_server_url = local.cluster_endpoint
+  offering_namespace = "data-offering"
+
+  # ArgoCD
   argocd_namespace = "argocd"
   argocd_project = local.argocd_project_name
+
+  # Helm
   helm_chart_url = "git@github.com:KL-Engineering/data-manifests.git"
-  helm_chart_revision = "HEAD"
-  offering_namespace = "data-offering"
+  microgateway_helm_chart_revision = "HEAD"
+  istio_helm_chart_revision = "HEAD"
+  
   domain = "apifactory.kidsloop.live"
+  
   providers = {
     aws            = aws
     kubernetes     = kubernetes

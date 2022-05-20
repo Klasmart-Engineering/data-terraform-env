@@ -86,7 +86,13 @@ variable "helm_chart_url" {
   type        = string
 }
 
-variable "helm_chart_revision" {
+variable "microgateway_helm_chart_revision" {
+  description = "The git tag for the desired version of the helm chart"
+  type        = string
+  default = "main"
+}
+
+variable "istio_helm_chart_revision" {
   description = "The git tag for the desired version of the helm chart"
   type        = string
   default = "main"

@@ -20,7 +20,7 @@ module "service_instance" {
   argocd_project = local.argocd_project_name
   helm_chart_url = "git@github.com:KL-Engineering/data-manifests.git"
   helm_chart_revision = "HEAD"
-  service_namespace = "data-offering-apifactory-uk"
+  offering_namespace = "data-offering"
   domain = "apifactory.kidsloop.live"
   providers = {
     aws            = aws

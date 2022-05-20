@@ -57,10 +57,9 @@ variable "service_account_name" {
   default     = "data-services-sa"
 }
 
-variable "service_namespace" {
-  description = "The kubernetes namespace which the service will be deployed to"
+variable "offering_namespace" {
+  description = "The kubernetes namespace which the offering will be deployed to"
   type        = string
-  default     = "data-services"
 }
 
 # Logging inputs

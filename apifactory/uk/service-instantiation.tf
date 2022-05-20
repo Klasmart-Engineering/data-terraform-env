@@ -21,7 +21,7 @@ module "service_instance" {
   helm_chart_url = "git@github.com:KL-Engineering/data-manifests.git"
   helm_chart_revision = "HEAD"
   service_namespace = "data-offering-apifactory-uk"
-
+  domain = "apifactory.kidsloop.live"
   providers = {
     aws            = aws
     kubernetes     = kubernetes

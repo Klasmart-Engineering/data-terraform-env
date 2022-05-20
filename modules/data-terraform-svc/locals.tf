@@ -15,6 +15,6 @@ locals {
   )
 
   # Passthrough
-  vpc_id       = var.vpc_id
+  # vpc_id       = var.vpc_id
   name_prefix  = "${var.project}-${var.project_region}-${var.project_environment}"
 }

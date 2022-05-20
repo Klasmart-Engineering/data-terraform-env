@@ -25,4 +25,5 @@ locals {
 
   # ArgoCD Project
   argocd_project_name                         = local.dep_offering.argocd_project_name
+  offering_namespace                         = local.dep_offering.offering_namespace
 }

@@ -16,7 +16,7 @@ module "service_instance" {
 
   # Kubernetes
   kubernetes_server_url = local.cluster_endpoint
-  offering_namespace = "data-offering"
+  offering_namespace = local.offering_namespace
 
   # ArgoCD
   argocd_namespace = "argocd"

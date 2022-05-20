@@ -25,7 +25,7 @@ resource "argocd_application" "microgateway" {
 
     destination {
       server    = var.kubernetes_server_url
-      namespace = var.service_namespace
+      namespace = var.offering_namespace
     }
     sync_policy {
       automated = {
